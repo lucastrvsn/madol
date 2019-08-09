@@ -1,6 +1,6 @@
 {
   "name": "madol",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Lucas Trevisan <lucastrvsn@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/lucastrvsn/madol.git",
@@ -15,6 +15,9 @@
   "homepage": "https://github.com/lucastrvsn/madol#readme",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c"
   },
