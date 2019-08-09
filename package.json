@@ -1,0 +1,39 @@
+{
+  "name": "madol",
+  "version": "1.0.0",
+  "author": "Lucas Trevisan <lucastrvsn@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/lucastrvsn/madol.git",
+  "keywords": [
+    "react",
+    "hooks",
+    "modal"
+  ],
+  "bugs": {
+    "url": "https://github.com/lucastrvsn/madol/issues"
+  },
+  "homepage": "https://github.com/lucastrvsn/madol#readme",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "react-transition-group": "^4.2.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "rollup": "^1.19.4",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.2",
+    "styled-components": "^4.3.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.6",
+    "react-dom": ">=16.8.6"
+  }
+}
