@@ -5,8 +5,9 @@ function ModalProvider({ children }) {
   const [modals, setModals] = useState([])
 
   const openModal = (modal, props) => {
+    const id = modals.length + 1
     const newModal = {
-      id: modals.length + 1,
+      id,
       component: modal,
       props
     }
