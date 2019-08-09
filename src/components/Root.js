@@ -1,22 +1,22 @@
 import React, { useContext, useMemo } from 'react'
-import { createGlobalStyle } from 'styled-components'
 import { Transition, TransitionGroup } from 'react-transition-group'
 import ModalContext from '../contexts/ModalContext'
 import RootContext from '../contexts/RootContext'
 
-const RemoveScroll = createGlobalStyle`
-  html, body {
-    overflow: hidden;
-  }
-`
-
 function Root() {
   const { modals, closeModal } = useContext(ModalContext)
 
+  useEffect(() => {
+    const htmlNode = document.querySelector('html')
+    const bodyNode = document.querySelector('body')
+    const overflowStyle = modals.length > 0 ? 'hidden' : 'visible'
+
+    htmlNode.style.overflow = overflowStyle
+    bodyNode.style.overflow = overflowStyle
+  }, [modals.length])
+
   return (
     <>
-      {modals.length > 0 && <RemoveScroll />}
-
       <TransitionGroup component={null}>
         {useMemo(
           () =>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ModalContext from '../contexts/ModalContext'
 
-const ModalProvider = ({ children }) => {
+function ModalProvider({ children }) {
   const [modals, setModals] = useState([])
 
   const openModal = (modal, props) => {
